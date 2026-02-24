@@ -1,0 +1,110 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: matrix_transpose
+Generated: 2026-02-25 03:03:17
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 8
+Total Dependencies: 4
+Average Fan-In: 0.5
+Average Fan-Out: 0.5
+
+Signal Type Distribution:
+  input       :    4
+  integer     :    1
+  output      :    2
+  reg         :    1
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: i
+   Type: integer
+   Width: 31:0
+   Fan-In Count: 2
+   Driven By:
+     - i
+     - state
+
+2. Signal: done
+   Type: output
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - state
+
+3. Signal: state
+   Type: reg
+   Width: 3:0
+   Fan-In Count: 1
+   Driven By:
+     - state
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: state
+   Type: reg
+   Width: 3:0
+   Fan-Out Count: 3
+   Drives:
+     - done
+     - i
+     - state
+
+2. Signal: i
+   Type: integer
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - i
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: a
+  Type: input, Width: 7:0
+  Fan-In: 0, Fan-Out: 0
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: done
+  Type: output, Width: 1
+  Fan-In: 1, Fan-Out: 0
+  Driven by: state
+
+Signal: i
+  Type: integer, Width: 31:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: i, state
+  Drives: i
+
+Signal: rst
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: start
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: state
+  Type: reg, Width: 3:0
+  Fan-In: 1, Fan-Out: 3
+  Driven by: state
+  Drives: done, i, state
+
+Signal: transpose
+  Type: output, Width: 7:0
+  Fan-In: 0, Fan-Out: 0
+
+================================================================================
+END OF REPORT
+================================================================================

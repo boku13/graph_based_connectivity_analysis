@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "module_name": "matrix_transpose",
+    "generated": "2026-02-25T03:03:17.978194",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "matrix_transpose",
+    "total_signals": 8,
+    "total_dependencies": 4,
+    "signal_types": {
+      "input": 4,
+      "output": 2,
+      "reg": 1,
+      "integer": 1
+    },
+    "average_fan_in": 0.5,
+    "average_fan_out": 0.5
+  },
+  "top_fan_in": [
+    {
+      "signal": "i",
+      "type": "integer",
+      "width": "31:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "i",
+        "state"
+      ]
+    },
+    {
+      "signal": "done",
+      "type": "output",
+      "width": "1",
+      "fan_in_count": 1,
+      "drivers": [
+        "state"
+      ]
+    },
+    {
+      "signal": "state",
+      "type": "reg",
+      "width": "3:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "state"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "state",
+      "type": "reg",
+      "width": "3:0",
+      "fan_out_count": 3,
+      "loads": [
+        "done",
+        "i",
+        "state"
+      ]
+    },
+    {
+      "signal": "i",
+      "type": "integer",
+      "width": "31:0",
+      "fan_out_count": 1,
+      "loads": [
+        "i"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "rst": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "start": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "a": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "7:0"
+    },
+    "transpose": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "7:0"
+    },
+    "done": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "state"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "state": {
+      "fan_in_count": 1,
+      "fan_out_count": 3,
+      "fan_in_signals": [
+        "state"
+      ],
+      "fan_out_signals": [
+        "done",
+        "i",
+        "state"
+      ],
+      "signal_type": "reg",
+      "width": "3:0"
+    },
+    "i": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "i",
+        "state"
+      ],
+      "fan_out_signals": [
+        "i"
+      ],
+      "signal_type": "integer",
+      "width": "31:0"
+    }
+  }
+}

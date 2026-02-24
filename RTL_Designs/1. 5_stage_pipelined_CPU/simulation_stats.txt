@@ -1,0 +1,62 @@
+# Allocation: Simulator allocated 4694 kB (elbread=427 elab2=4131 kernel=136 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# PLI: $readmemb(design.sv:31): Could not open file "imem.txt" for reading [systf:CMN9]
+# PLI: $readmemb(design.sv:32): Could not open file "dmem.txt" for reading [systf:CMN9]
+# KERNEL: Time=0 | IF_PC=xxxxxxxx | IF_nop=x | ID_Instr=xxxxxxxx | RF[1]=00000000 | RF[2]=00000000 | RF[3]=00000000
+# KERNEL: Time=5000 | IF_PC=00000000 | IF_nop=0 | ID_Instr=00000000 | RF[1]=00000000 | RF[2]=00000000 | RF[3]=00000000
+# KERNEL: Time=6000: Register RF[0] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[1] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[2] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[3] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[4] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[5] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[6] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[7] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[8] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[9] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[10] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[11] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[12] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[13] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[14] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[15] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[16] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[17] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[18] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[19] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[20] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[21] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[22] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[23] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[24] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[25] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[26] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[27] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[28] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[29] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[30] changed from xxxxxxxx to 00000000
+# KERNEL: Time=6000: Register RF[31] changed from xxxxxxxx to 00000000
+# KERNEL: Time=25000 | IF_PC=00000004 | IF_nop=0 | ID_Instr=8c010004 | RF[1]=00000000 | RF[2]=00000000 | RF[3]=00000000
+# KERNEL: Time=35000 | IF_PC=00000008 | IF_nop=0 | ID_Instr=8c020008 | RF[1]=00000000 | RF[2]=00000000 | RF[3]=00000000
+# KERNEL: Time=45000 | IF_PC=0000000c | IF_nop=0 | ID_Instr=00000000 | RF[1]=00000000 | RF[2]=00000000 | RF[3]=00000000
+# KERNEL: Time=55000 | IF_PC=00000010 | IF_nop=0 | ID_Instr=00000000 | RF[1]=00000000 | RF[2]=00000000 | RF[3]=00000000
+# KERNEL: Time=65000 | IF_PC=00000014 | IF_nop=0 | ID_Instr=00000000 | RF[1]=00000000 | RF[2]=00000000 | RF[3]=00000000
+# KERNEL: Time=75000 | IF_PC=00000018 | IF_nop=0 | ID_Instr=00000000 | RF[1]=00000000 | RF[2]=0000000f | RF[3]=00000000
+# KERNEL: Time=76000: Register RF[2] changed from 00000000 to 0000000f
+# KERNEL: Time=85000 | IF_PC=0000001c | IF_nop=0 | ID_Instr=00221821 | RF[1]=00000000 | RF[2]=0000000f | RF[3]=00000000
+# KERNEL: Time=95000 | IF_PC=0000001c | IF_nop=1 | ID_Instr=ffffffff | RF[1]=00000000 | RF[2]=0000000f | RF[3]=00000000
+# KERNEL: Time=125000 | IF_PC=0000001c | IF_nop=1 | ID_Instr=ffffffff | RF[1]=00000000 | RF[2]=0000000f | RF[3]=0000000f
+# KERNEL: Time=126000: Register RF[3] changed from 00000000 to 0000000f
+# KERNEL: ------ Simulation Finished ------
+# KERNEL: Final RF[1] (should be 12): 00000000
+# KERNEL: Final RF[2] (should be 15): 0000000f
+# KERNEL: Final RF[3] (should be 27): 0000000f
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (171): $finish called.
+# KERNEL: Time: 600 ns,  Iteration: 0,  Instance: /tb_pipeline,  Process: @INITIAL#165_9@.
+# KERNEL: stopped at time: 600 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Finding VCD file...
+./pipeline.vcd
+[2025-02-25 16:58:11 UTC] Opening EPWave...
+Done

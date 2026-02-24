@@ -1,0 +1,179 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: uart
+Generated: 2026-02-25 03:03:18
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 13
+Total Dependencies: 8
+Average Fan-In: 0.62
+Average Fan-Out: 0.62
+
+Signal Type Distribution:
+  input       :    5
+  output      :    3
+  reg         :    5
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: i
+   Type: reg
+   Width: 3:0
+   Fan-In Count: 4
+   Driven By:
+     - i
+     - r_data
+     - r_data_buff
+     - rx
+
+2. Signal: rx
+   Type: input
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - recv_flag
+
+3. Signal: r_data
+   Type: output
+   Width: 7:0
+   Fan-In Count: 1
+   Driven By:
+     - r_data_buff
+
+4. Signal: r_data_buff
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 1
+   Driven By:
+     - rx
+
+5. Signal: cnt
+   Type: reg
+   Width: 13:0
+   Fan-In Count: 1
+   Driven By:
+     - cnt
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: rx
+   Type: input
+   Width: 1
+   Fan-Out Count: 2
+   Drives:
+     - i
+     - r_data_buff
+
+2. Signal: r_data_buff
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 2
+   Drives:
+     - i
+     - r_data
+
+3. Signal: r_data
+   Type: output
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - i
+
+4. Signal: recv_flag
+   Type: reg
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - rx
+
+5. Signal: cnt
+   Type: reg
+   Width: 13:0
+   Fan-Out Count: 1
+   Drives:
+     - cnt
+
+6. Signal: i
+   Type: reg
+   Width: 3:0
+   Fan-Out Count: 1
+   Drives:
+     - i
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: cnt
+  Type: reg, Width: 13:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: cnt
+  Drives: cnt
+
+Signal: i
+  Type: reg, Width: 3:0
+  Fan-In: 4, Fan-Out: 1
+  Driven by: i, r_data, r_data_buff, rx
+  Drives: i
+
+Signal: r_ack
+  Type: output, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: r_data
+  Type: output, Width: 7:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: r_data_buff
+  Drives: i
+
+Signal: r_data_buff
+  Type: reg, Width: 7:0
+  Fan-In: 1, Fan-Out: 2
+  Driven by: rx
+  Drives: i, r_data
+
+Signal: recv_flag
+  Type: reg, Width: 1
+  Fan-In: 0, Fan-Out: 1
+  Drives: rx
+
+Signal: rst_n
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: rx
+  Type: input, Width: 1
+  Fan-In: 1, Fan-Out: 2
+  Driven by: recv_flag
+  Drives: i, r_data_buff
+
+Signal: rx_flag
+  Type: reg, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: t_ack
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: t_data
+  Type: input, Width: 7:0
+  Fan-In: 0, Fan-Out: 0
+
+Signal: tx
+  Type: output, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+================================================================================
+END OF REPORT
+================================================================================

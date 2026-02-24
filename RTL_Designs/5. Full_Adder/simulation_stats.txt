@@ -1,0 +1,13 @@
+# Allocation: Simulator allocated 4669 kB (elbread=427 elab2=4108 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: A = 0, B = 0, C_In = 0 | Sum = 0, C_Out = 0
+# KERNEL: A = 0, B = 0, C_In = 1 | Sum = 1, C_Out = 0
+# KERNEL: A = 0, B = 1, C_In = 0 | Sum = 1, C_Out = 0
+# KERNEL: A = 0, B = 1, C_In = 1 | Sum = 0, C_Out = 1
+# KERNEL: A = 1, B = 0, C_In = 0 | Sum = 1, C_Out = 0
+# KERNEL: A = 1, B = 0, C_In = 1 | Sum = 0, C_Out = 1
+# KERNEL: A = 1, B = 1, C_In = 0 | Sum = 0, C_Out = 1
+# KERNEL: A = 1, B = 1, C_In = 1 | Sum = 1, C_Out = 1
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (34): $finish called.
+# KERNEL: Time: 80 ns,  Iteration: 0,  Instance: /testbench,  Process: @INITIAL#15_1@.
+# KERNEL: stopped at time: 80 ns

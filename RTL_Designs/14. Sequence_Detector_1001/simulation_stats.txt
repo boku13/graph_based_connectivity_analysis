@@ -1,0 +1,72 @@
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: Time = 0 | Input = 0 | Output = 0 | State =  
+# KERNEL: Time = 50000 | Input = 1 | Output = 0 | State =  
+# KERNEL: Time = 55000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 60000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 65000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 75000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 80000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 85000 | Input = 1 | Output = 1 | State = 
+# KERNEL: Time = 90000 | Input = 0 | Output = 1 | State = 
+# KERNEL: Time = 95000 | Input = 0 | Output = 0 | State =  
+# KERNEL: Time = 130000 | Input = 1 | Output = 0 | State =  
+# KERNEL: Time = 135000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 140000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 145000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 155000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 160000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 165000 | Input = 1 | Output = 1 | State = 
+# KERNEL: Time = 170000 | Input = 0 | Output = 1 | State = 
+# KERNEL: Time = 175000 | Input = 0 | Output = 0 | State =  
+# KERNEL: Time = 190000 | Input = 1 | Output = 0 | State =  
+# KERNEL: Time = 195000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 200000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 205000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 210000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 215000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 220000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 225000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 235000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 240000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 245000 | Input = 1 | Output = 1 | State = 
+# KERNEL: Time = 250000 | Input = 0 | Output = 1 | State = 
+# KERNEL: Time = 255000 | Input = 0 | Output = 0 | State =  
+# KERNEL: Time = 290000 | Input = 1 | Output = 0 | State =  
+# KERNEL: Time = 295000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 300000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 305000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 315000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 320000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 325000 | Input = 1 | Output = 1 | State = 
+# KERNEL: Time = 335000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 340000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 345000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 355000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 360000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 365000 | Input = 1 | Output = 1 | State = 
+# KERNEL: Time = 375000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 380000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 385000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 395000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 400000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 405000 | Input = 1 | Output = 1 | State = 
+# KERNEL: Time = 410000 | Input = 0 | Output = 1 | State = 
+# KERNEL: Time = 415000 | Input = 0 | Output = 0 | State =  
+# KERNEL: Time = 470000 | Input = 1 | Output = 0 | State =  
+# KERNEL: Time = 475000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 480000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 485000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 495000 | Input = 0 | Output = 0 | State = 
+# KERNEL: Time = 500000 | Input = 1 | Output = 0 | State = 
+# KERNEL: Time = 505000 | Input = 1 | Output = 1 | State = 
+# KERNEL: Time = 510000 | Input = 0 | Output = 1 | State = 
+# KERNEL: Time = 515000 | Input = 0 | Output = 0 | State =  
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (42): $finish called.
+# KERNEL: Time: 570 ns,  Iteration: 0,  Instance: /sequence_detector_1001_tb,  Process: @INITIAL#26_1@.
+# KERNEL: stopped at time: 570 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Finding VCD file...
+./sequence_detector.vcd
+[2025-02-24 10:22:02 UTC] Opening EPWave...
+Done

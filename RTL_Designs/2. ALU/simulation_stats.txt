@@ -1,0 +1,23 @@
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4680 kB (elbread=427 elab2=4117 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: Time = 10000 | Opcode = 000 | A = 0003 | B = 0004 | Result = 0007 | PSR = 0001
+# KERNEL: Time = 20000 | Opcode = 000 | A = ffff | B = 0001 | Result = 0000 | PSR = 1100
+# KERNEL: Time = 30000 | Opcode = 001 | A = 0008 | B = 0003 | Result = 0005 | PSR = 0000
+# KERNEL: Time = 40000 | Opcode = 001 | A = 0003 | B = 0008 | Result = fffb | PSR = 1011
+# KERNEL: Time = 50000 | Opcode = 010 | A = 0007 | B = 0000 | Result = fff9 | PSR = 1010
+# KERNEL: Time = 60000 | Opcode = 011 | A = 00ff | B = 0000 | Result = ff00 | PSR = 1010
+# KERNEL: Time = 70000 | Opcode = 100 | A = 00f0 | B = 0f0f | Result = 0000 | PSR = 1100
+# KERNEL: Time = 80000 | Opcode = 101 | A = 00f0 | B = 0f0f | Result = 0fff | PSR = 1000
+# KERNEL: Time = 90000 | Opcode = 000 | A = 0000 | B = 0000 | Result = 0000 | PSR = 0100
+# KERNEL: Time = 100000 | Opcode = 001 | A = 1234 | B = 1234 | Result = 0000 | PSR = 0100
+# KERNEL: Time = 110000 | Opcode = 010 | A = 8000 | B = 0000 | Result = 8000 | PSR = 0011
+# KERNEL: Time = 120000 | Opcode = 011 | A = ffff | B = 0000 | Result = 0000 | PSR = 0100
+# KERNEL: Time = 130000 | Opcode = 100 | A = ffff | B = ffff | Result = ffff | PSR = 0010
+# KERNEL: Time = 140000 | Opcode = 101 | A = 0000 | B = 0000 | Result = 0000 | PSR = 0100
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (134): $finish called.
+# KERNEL: Time: 140 ns,  Iteration: 0,  Instance: /ALU_tb,  Process: @INITIAL#28_0@.
+# KERNEL: stopped at time: 140 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Done

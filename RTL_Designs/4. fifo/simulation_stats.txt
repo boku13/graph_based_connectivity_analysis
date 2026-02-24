@@ -1,0 +1,11 @@
+# Allocation: Simulator allocated 4671 kB (elbread=427 elab2=4109 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (75): $finish called.
+# KERNEL: Time: 41750 ns,  Iteration: 0,  Instance: /FIFO_tb,  Process: @INITIAL#32_2@.
+# KERNEL: stopped at time: 41750 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Finding VCD file...
+./fifo_tb.vcd
+[2025-02-24 12:07:22 UTC] Opening EPWave...
+Done

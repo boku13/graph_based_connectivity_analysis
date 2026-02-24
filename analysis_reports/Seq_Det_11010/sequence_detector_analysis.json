@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "module_name": "sequence_detector",
+    "generated": "2026-02-25T03:03:17.960057",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "sequence_detector",
+    "total_signals": 6,
+    "total_dependencies": 5,
+    "signal_types": {
+      "input": 3,
+      "output": 1,
+      "state_t": 2
+    },
+    "average_fan_in": 0.83,
+    "average_fan_out": 0.83
+  },
+  "top_fan_in": [
+    {
+      "signal": "mealy_output",
+      "type": "output",
+      "width": "1",
+      "fan_in_count": 2,
+      "drivers": [
+        "present_state",
+        "serial_input"
+      ]
+    },
+    {
+      "signal": "next_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_in_count": 2,
+      "drivers": [
+        "present_state",
+        "serial_input"
+      ]
+    },
+    {
+      "signal": "present_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_in_count": 1,
+      "drivers": [
+        "next_state"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "serial_input",
+      "type": "input",
+      "width": "1",
+      "fan_out_count": 2,
+      "loads": [
+        "mealy_output",
+        "next_state"
+      ]
+    },
+    {
+      "signal": "present_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_out_count": 2,
+      "loads": [
+        "mealy_output",
+        "next_state"
+      ]
+    },
+    {
+      "signal": "next_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_out_count": 1,
+      "loads": [
+        "present_state"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "rst": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "serial_input": {
+      "fan_in_count": 0,
+      "fan_out_count": 2,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "mealy_output",
+        "next_state"
+      ],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "mealy_output": {
+      "fan_in_count": 2,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "present_state",
+        "serial_input"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "present_state": {
+      "fan_in_count": 1,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "next_state"
+      ],
+      "fan_out_signals": [
+        "mealy_output",
+        "next_state"
+      ],
+      "signal_type": "state_t",
+      "width": "custom"
+    },
+    "next_state": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "present_state",
+        "serial_input"
+      ],
+      "fan_out_signals": [
+        "present_state"
+      ],
+      "signal_type": "state_t",
+      "width": "custom"
+    }
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "metadata": {
+    "module_name": "quicksort",
+    "generated": "2026-02-25T03:03:18.000771",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "quicksort",
+    "total_signals": 12,
+    "total_dependencies": 18,
+    "signal_types": {
+      "input": 4,
+      "output": 2,
+      "reg": 6
+    },
+    "average_fan_in": 1.5,
+    "average_fan_out": 1.5
+  },
+  "top_fan_in": [
+    {
+      "signal": "data",
+      "type": "reg",
+      "width": "7:0",
+      "fan_in_count": 5,
+      "drivers": [
+        "L",
+        "data",
+        "indata",
+        "piv",
+        "state"
+      ]
+    },
+    {
+      "signal": "L",
+      "type": "reg",
+      "width": "3:0",
+      "fan_in_count": 3,
+      "drivers": [
+        "L",
+        "beg",
+        "state"
+      ]
+    },
+    {
+      "signal": "odata",
+      "type": "output",
+      "width": "7:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "data",
+        "state"
+      ]
+    },
+    {
+      "signal": "beg",
+      "type": "reg",
+      "width": "3:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "L",
+        "state"
+      ]
+    },
+    {
+      "signal": "i",
+      "type": "reg",
+      "width": "3:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "i",
+        "state"
+      ]
+    },
+    {
+      "signal": "piv",
+      "type": "reg",
+      "width": "7:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "data",
+        "state"
+      ]
+    },
+    {
+      "signal": "done",
+      "type": "output",
+      "width": "1",
+      "fan_in_count": 1,
+      "drivers": [
+        "state"
+      ]
+    },
+    {
+      "signal": "state",
+      "type": "reg",
+      "width": "1:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "state"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "state",
+      "type": "reg",
+      "width": "1:0",
+      "fan_out_count": 8,
+      "loads": [
+        "L",
+        "beg",
+        "data",
+        "done",
+        "i",
+        "odata",
+        "piv",
+        "state"
+      ]
+    },
+    {
+      "signal": "data",
+      "type": "reg",
+      "width": "7:0",
+      "fan_out_count": 3,
+      "loads": [
+        "data",
+        "odata",
+        "piv"
+      ]
+    },
+    {
+      "signal": "L",
+      "type": "reg",
+      "width": "3:0",
+      "fan_out_count": 3,
+      "loads": [
+        "L",
+        "beg",
+        "data"
+      ]
+    },
+    {
+      "signal": "indata",
+      "type": "input",
+      "width": "7:0",
+      "fan_out_count": 1,
+      "loads": [
+        "data"
+      ]
+    },
+    {
+      "signal": "beg",
+      "type": "reg",
+      "width": "3:0",
+      "fan_out_count": 1,
+      "loads": [
+        "L"
+      ]
+    },
+    {
+      "signal": "i",
+      "type": "reg",
+      "width": "3:0",
+      "fan_out_count": 1,
+      "loads": [
+        "i"
+      ]
+    },
+    {
+      "signal": "piv",
+      "type": "reg",
+      "width": "7:0",
+      "fan_out_count": 1,
+      "loads": [
+        "data"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "rst": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "start": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "indata": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "data"
+      ],
+      "signal_type": "input",
+      "width": "7:0"
+    },
+    "odata": {
+      "fan_in_count": 2,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "data",
+        "state"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "7:0"
+    },
+    "done": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "state"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "data": {
+      "fan_in_count": 5,
+      "fan_out_count": 3,
+      "fan_in_signals": [
+        "L",
+        "data",
+        "indata",
+        "piv",
+        "state"
+      ],
+      "fan_out_signals": [
+        "data",
+        "odata",
+        "piv"
+      ],
+      "signal_type": "reg",
+      "width": "7:0"
+    },
+    "beg": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "L",
+        "state"
+      ],
+      "fan_out_signals": [
+        "L"
+      ],
+      "signal_type": "reg",
+      "width": "3:0"
+    },
+    "i": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "i",
+        "state"
+      ],
+      "fan_out_signals": [
+        "i"
+      ],
+      "signal_type": "reg",
+      "width": "3:0"
+    },
+    "piv": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "data",
+        "state"
+      ],
+      "fan_out_signals": [
+        "data"
+      ],
+      "signal_type": "reg",
+      "width": "7:0"
+    },
+    "L": {
+      "fan_in_count": 3,
+      "fan_out_count": 3,
+      "fan_in_signals": [
+        "L",
+        "beg",
+        "state"
+      ],
+      "fan_out_signals": [
+        "L",
+        "beg",
+        "data"
+      ],
+      "signal_type": "reg",
+      "width": "3:0"
+    },
+    "state": {
+      "fan_in_count": 1,
+      "fan_out_count": 8,
+      "fan_in_signals": [
+        "state"
+      ],
+      "fan_out_signals": [
+        "L",
+        "beg",
+        "data",
+        "done",
+        "i",
+        "odata",
+        "piv",
+        "state"
+      ],
+      "signal_type": "reg",
+      "width": "1:0"
+    }
+  }
+}

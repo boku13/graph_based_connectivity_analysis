@@ -1,0 +1,509 @@
+{
+  "metadata": {
+    "module_name": "pipeline",
+    "generated": "2026-02-25T03:03:18.053315",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "pipeline",
+    "total_signals": 26,
+    "total_dependencies": 24,
+    "signal_types": {
+      "input": 2,
+      "reg": 23,
+      "integer": 1
+    },
+    "average_fan_in": 0.92,
+    "average_fan_out": 0.92
+  },
+  "top_fan_in": [
+    {
+      "signal": "WB_Wrt_data",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 3,
+      "drivers": [
+        "MEM_ALUresult",
+        "MEM_rd_mem",
+        "dmem"
+      ]
+    },
+    {
+      "signal": "EX_Read_data1",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "ID_Instr",
+        "RF"
+      ]
+    },
+    {
+      "signal": "EX_is_I_type",
+      "type": "reg",
+      "width": "1",
+      "fan_in_count": 2,
+      "drivers": [
+        "IsBranch",
+        "opcode"
+      ]
+    },
+    {
+      "signal": "MEM_ALUresult",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "EX_Imm",
+        "EX_Read_data1"
+      ]
+    },
+    {
+      "signal": "opcode",
+      "type": "reg",
+      "width": "5:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "ID_Instr",
+        "IsBranch"
+      ]
+    },
+    {
+      "signal": "RF",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "WB_Wrt_data"
+      ]
+    },
+    {
+      "signal": "IF_PC",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "IF_PC"
+      ]
+    },
+    {
+      "signal": "ID_Instr",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "imem"
+      ]
+    },
+    {
+      "signal": "ID_nop",
+      "type": "reg",
+      "width": "1",
+      "fan_in_count": 1,
+      "drivers": [
+        "IF_nop"
+      ]
+    },
+    {
+      "signal": "EX_Imm",
+      "type": "reg",
+      "width": "15:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "ID_Instr"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "ID_Instr",
+      "type": "reg",
+      "width": "31:0",
+      "fan_out_count": 5,
+      "loads": [
+        "EX_Imm",
+        "EX_Read_data1",
+        "EX_Rs",
+        "funct",
+        "opcode"
+      ]
+    },
+    {
+      "signal": "opcode",
+      "type": "reg",
+      "width": "5:0",
+      "fan_out_count": 2,
+      "loads": [
+        "EX_is_I_type",
+        "IsBranch"
+      ]
+    },
+    {
+      "signal": "IsBranch",
+      "type": "reg",
+      "width": "1",
+      "fan_out_count": 2,
+      "loads": [
+        "EX_is_I_type",
+        "opcode"
+      ]
+    },
+    {
+      "signal": "imem",
+      "type": "reg",
+      "width": "7:0",
+      "fan_out_count": 1,
+      "loads": [
+        "ID_Instr"
+      ]
+    },
+    {
+      "signal": "dmem",
+      "type": "reg",
+      "width": "7:0",
+      "fan_out_count": 1,
+      "loads": [
+        "WB_Wrt_data"
+      ]
+    },
+    {
+      "signal": "RF",
+      "type": "reg",
+      "width": "31:0",
+      "fan_out_count": 1,
+      "loads": [
+        "EX_Read_data1"
+      ]
+    },
+    {
+      "signal": "IF_PC",
+      "type": "reg",
+      "width": "31:0",
+      "fan_out_count": 1,
+      "loads": [
+        "IF_PC"
+      ]
+    },
+    {
+      "signal": "IF_nop",
+      "type": "reg",
+      "width": "1",
+      "fan_out_count": 1,
+      "loads": [
+        "ID_nop"
+      ]
+    },
+    {
+      "signal": "ID_nop",
+      "type": "reg",
+      "width": "1",
+      "fan_out_count": 1,
+      "loads": [
+        "EX_nop"
+      ]
+    },
+    {
+      "signal": "EX_Read_data1",
+      "type": "reg",
+      "width": "31:0",
+      "fan_out_count": 1,
+      "loads": [
+        "MEM_ALUresult"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "reset": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "imem": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "ID_Instr"
+      ],
+      "signal_type": "reg",
+      "width": "7:0"
+    },
+    "dmem": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "WB_Wrt_data"
+      ],
+      "signal_type": "reg",
+      "width": "7:0"
+    },
+    "RF": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "WB_Wrt_data"
+      ],
+      "fan_out_signals": [
+        "EX_Read_data1"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "IF_PC": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "IF_PC"
+      ],
+      "fan_out_signals": [
+        "IF_PC"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "IF_nop": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "ID_nop"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "ID_Instr": {
+      "fan_in_count": 1,
+      "fan_out_count": 5,
+      "fan_in_signals": [
+        "imem"
+      ],
+      "fan_out_signals": [
+        "EX_Imm",
+        "EX_Read_data1",
+        "EX_Rs",
+        "funct",
+        "opcode"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "ID_nop": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "IF_nop"
+      ],
+      "fan_out_signals": [
+        "EX_nop"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "EX_Read_data1": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "ID_Instr",
+        "RF"
+      ],
+      "fan_out_signals": [
+        "MEM_ALUresult"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "EX_Imm": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "ID_Instr"
+      ],
+      "fan_out_signals": [
+        "MEM_ALUresult"
+      ],
+      "signal_type": "reg",
+      "width": "15:0"
+    },
+    "EX_Rs": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "ID_Instr"
+      ],
+      "fan_out_signals": [
+        "MEM_Rs"
+      ],
+      "signal_type": "reg",
+      "width": "4:0"
+    },
+    "EX_is_I_type": {
+      "fan_in_count": 2,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "IsBranch",
+        "opcode"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "EX_nop": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "ID_nop"
+      ],
+      "fan_out_signals": [
+        "MEM_nop"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "MEM_ALUresult": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "EX_Imm",
+        "EX_Read_data1"
+      ],
+      "fan_out_signals": [
+        "WB_Wrt_data"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "MEM_Rs": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "EX_Rs"
+      ],
+      "fan_out_signals": [
+        "WB_Rs"
+      ],
+      "signal_type": "reg",
+      "width": "4:0"
+    },
+    "MEM_rd_mem": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "WB_Wrt_data"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "MEM_nop": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "EX_nop"
+      ],
+      "fan_out_signals": [
+        "WB_nop"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "WB_Wrt_data": {
+      "fan_in_count": 3,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "MEM_ALUresult",
+        "MEM_rd_mem",
+        "dmem"
+      ],
+      "fan_out_signals": [
+        "RF"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "WB_Rs": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "MEM_Rs"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "reg",
+      "width": "4:0"
+    },
+    "WB_wrt_enable": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "WB_nop": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "MEM_nop"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "opcode": {
+      "fan_in_count": 2,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "ID_Instr",
+        "IsBranch"
+      ],
+      "fan_out_signals": [
+        "EX_is_I_type",
+        "IsBranch"
+      ],
+      "signal_type": "reg",
+      "width": "5:0"
+    },
+    "funct": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "ID_Instr"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "reg",
+      "width": "5:0"
+    },
+    "IsBranch": {
+      "fan_in_count": 1,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "opcode"
+      ],
+      "fan_out_signals": [
+        "EX_is_I_type",
+        "opcode"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "i": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "integer",
+      "width": "31:0"
+    }
+  }
+}

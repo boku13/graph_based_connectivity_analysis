@@ -1,0 +1,223 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: quicksort
+Generated: 2026-02-25 03:03:17
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 12
+Total Dependencies: 18
+Average Fan-In: 1.5
+Average Fan-Out: 1.5
+
+Signal Type Distribution:
+  input       :    4
+  output      :    2
+  reg         :    6
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: data
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 5
+   Driven By:
+     - L
+     - data
+     - indata
+     - piv
+     - state
+
+2. Signal: L
+   Type: reg
+   Width: 3:0
+   Fan-In Count: 3
+   Driven By:
+     - L
+     - beg
+     - state
+
+3. Signal: odata
+   Type: output
+   Width: 7:0
+   Fan-In Count: 2
+   Driven By:
+     - data
+     - state
+
+4. Signal: beg
+   Type: reg
+   Width: 3:0
+   Fan-In Count: 2
+   Driven By:
+     - L
+     - state
+
+5. Signal: i
+   Type: reg
+   Width: 3:0
+   Fan-In Count: 2
+   Driven By:
+     - i
+     - state
+
+6. Signal: piv
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 2
+   Driven By:
+     - data
+     - state
+
+7. Signal: done
+   Type: output
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - state
+
+8. Signal: state
+   Type: reg
+   Width: 1:0
+   Fan-In Count: 1
+   Driven By:
+     - state
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: state
+   Type: reg
+   Width: 1:0
+   Fan-Out Count: 8
+   Drives:
+     - L
+     - beg
+     - data
+     - done
+     - i
+     - odata
+     - piv
+     - state
+
+2. Signal: data
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 3
+   Drives:
+     - data
+     - odata
+     - piv
+
+3. Signal: L
+   Type: reg
+   Width: 3:0
+   Fan-Out Count: 3
+   Drives:
+     - L
+     - beg
+     - data
+
+4. Signal: indata
+   Type: input
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - data
+
+5. Signal: beg
+   Type: reg
+   Width: 3:0
+   Fan-Out Count: 1
+   Drives:
+     - L
+
+6. Signal: i
+   Type: reg
+   Width: 3:0
+   Fan-Out Count: 1
+   Drives:
+     - i
+
+7. Signal: piv
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - data
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: L
+  Type: reg, Width: 3:0
+  Fan-In: 3, Fan-Out: 3
+  Driven by: L, beg, state
+  Drives: L, beg, data
+
+Signal: beg
+  Type: reg, Width: 3:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: L, state
+  Drives: L
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: data
+  Type: reg, Width: 7:0
+  Fan-In: 5, Fan-Out: 3
+  Driven by: L, data, indata, piv, state
+  Drives: data, odata, piv
+
+Signal: done
+  Type: output, Width: 1
+  Fan-In: 1, Fan-Out: 0
+  Driven by: state
+
+Signal: i
+  Type: reg, Width: 3:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: i, state
+  Drives: i
+
+Signal: indata
+  Type: input, Width: 7:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: data
+
+Signal: odata
+  Type: output, Width: 7:0
+  Fan-In: 2, Fan-Out: 0
+  Driven by: data, state
+
+Signal: piv
+  Type: reg, Width: 7:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: data, state
+  Drives: data
+
+Signal: rst
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: start
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: state
+  Type: reg, Width: 1:0
+  Fan-In: 1, Fan-Out: 8
+  Driven by: state
+  Drives: L, beg, data, done, i, odata, piv, state
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,299 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: i2c_controller
+Generated: 2026-02-25 03:03:18
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 18
+Total Dependencies: 26
+Average Fan-In: 1.44
+Average Fan-Out: 1.44
+
+Signal Type Distribution:
+  inout       :    1
+  input       :    6
+  output      :    2
+  reg         :    9
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: i2c_sda
+   Type: inout
+   Width: 1
+   Fan-In Count: 6
+   Driven By:
+     - counter
+     - enable
+     - saved_addr
+     - saved_data
+     - state
+     - write_enable
+
+2. Signal: saved_addr
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 3
+   Driven By:
+     - addr
+     - rw
+     - state
+
+3. Signal: state
+   Type: reg
+   Width: 3:0
+   Fan-In Count: 3
+   Driven By:
+     - i2c_scl_enable
+     - saved_addr
+     - state
+
+4. Signal: i2c_scl
+   Type: output
+   Width: 1
+   Fan-In Count: 2
+   Driven By:
+     - i2c_clk
+     - i2c_scl_enable
+
+5. Signal: saved_data
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 2
+   Driven By:
+     - data_in
+     - state
+
+6. Signal: data_from_slave
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 2
+   Driven By:
+     - i2c_sda
+     - state
+
+7. Signal: counter
+   Type: reg
+   Width: 2:0
+   Fan-In Count: 2
+   Driven By:
+     - counter
+     - state
+
+8. Signal: counter2
+   Type: reg
+   Width: 1
+   Fan-In Count: 2
+   Driven By:
+     - counter2
+     - i2c_clk
+
+9. Signal: ready
+   Type: output
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - state
+
+10. Signal: i2c_clk
+   Type: reg
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - i2c_clk
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: state
+   Type: reg
+   Width: 3:0
+   Fan-Out Count: 8
+   Drives:
+     - counter
+     - data_from_slave
+     - i2c_sda
+     - ready
+     - saved_addr
+     - saved_data
+     - state
+     - write_enable
+
+2. Signal: i2c_clk
+   Type: reg
+   Width: 1
+   Fan-Out Count: 4
+   Drives:
+     - counter2
+     - i2c_clk
+     - i2c_scl
+     - i2c_scl_enable
+
+3. Signal: saved_addr
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 2
+   Drives:
+     - i2c_sda
+     - state
+
+4. Signal: counter
+   Type: reg
+   Width: 2:0
+   Fan-Out Count: 2
+   Drives:
+     - counter
+     - i2c_sda
+
+5. Signal: i2c_scl_enable
+   Type: reg
+   Width: 1
+   Fan-Out Count: 2
+   Drives:
+     - i2c_scl
+     - state
+
+6. Signal: enable
+   Type: input
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - i2c_sda
+
+7. Signal: addr
+   Type: input
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - saved_addr
+
+8. Signal: rw
+   Type: input
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - saved_addr
+
+9. Signal: data_in
+   Type: input
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - saved_data
+
+10. Signal: i2c_sda
+   Type: inout
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - data_from_slave
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: addr
+  Type: input, Width: 7:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: saved_addr
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: counter
+  Type: reg, Width: 2:0
+  Fan-In: 2, Fan-Out: 2
+  Driven by: counter, state
+  Drives: counter, i2c_sda
+
+Signal: counter2
+  Type: reg, Width: 1
+  Fan-In: 2, Fan-Out: 1
+  Driven by: counter2, i2c_clk
+  Drives: counter2
+
+Signal: data_from_slave
+  Type: reg, Width: 7:0
+  Fan-In: 2, Fan-Out: 0
+  Driven by: i2c_sda, state
+
+Signal: data_in
+  Type: input, Width: 7:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: saved_data
+
+Signal: enable
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 1
+  Drives: i2c_sda
+
+Signal: i2c_clk
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 4
+  Driven by: i2c_clk
+  Drives: counter2, i2c_clk, i2c_scl, i2c_scl_enable
+
+Signal: i2c_scl
+  Type: output, Width: 1
+  Fan-In: 2, Fan-Out: 0
+  Driven by: i2c_clk, i2c_scl_enable
+
+Signal: i2c_scl_enable
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 2
+  Driven by: i2c_clk
+  Drives: i2c_scl, state
+
+Signal: i2c_sda
+  Type: inout, Width: 1
+  Fan-In: 6, Fan-Out: 1
+  Driven by: counter, enable, saved_addr, saved_data, state, write_enable
+  Drives: data_from_slave
+
+Signal: ready
+  Type: output, Width: 1
+  Fan-In: 1, Fan-Out: 0
+  Driven by: state
+
+Signal: rst
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: rw
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 1
+  Drives: saved_addr
+
+Signal: saved_addr
+  Type: reg, Width: 7:0
+  Fan-In: 3, Fan-Out: 2
+  Driven by: addr, rw, state
+  Drives: i2c_sda, state
+
+Signal: saved_data
+  Type: reg, Width: 7:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: data_in, state
+  Drives: i2c_sda
+
+Signal: state
+  Type: reg, Width: 3:0
+  Fan-In: 3, Fan-Out: 8
+  Driven by: i2c_scl_enable, saved_addr, state
+  Drives: counter, data_from_slave, i2c_sda, ready, saved_addr, saved_data, state, write_enable
+
+Signal: write_enable
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 1
+  Driven by: state
+  Drives: i2c_sda
+
+================================================================================
+END OF REPORT
+================================================================================

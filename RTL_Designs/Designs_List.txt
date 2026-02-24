@@ -1,0 +1,24 @@
+1. Seq_Det_11010
+2. Matrix_Transpose
+3. Matrix_Addition
+4. Quick_Sort
+5. fifo
+6. Full_Adder
+7. I2C_Controller
+8. Matrix_Mult
+9. Max_Pooling
+10. RAM
+11. Sequence_Detector_1001
+12. UART_TX_RX
+13. 5_stage_pipelined_CPU
+14. ALU
+15. Elevator_Control
+16. AES
+17. Double-Precision Floating-Point Addition
+18. GSM speech coding
+19. MIPS
+20. Double-Precision Floating-Point Division
+21. Double-Precision Floating-Point Multiplication
+22. Double-Precision Floating-Point Sine
+23. Blowfish encryption algorithm
+24. Adaptive Differential Pulse-Code Modulation

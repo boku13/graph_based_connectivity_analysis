@@ -1,0 +1,83 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: max_pooling
+Generated: 2026-02-25 03:03:17
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 8
+Total Dependencies: 1
+Average Fan-In: 0.12
+Average Fan-Out: 0.12
+
+Signal Type Distribution:
+  input       :    4
+  integer     :    1
+  output      :    2
+  reg         :    1
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: i
+   Type: integer
+   Width: 31:0
+   Fan-In Count: 1
+   Driven By:
+     - i
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: i
+   Type: integer
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - i
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: done
+  Type: output, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: i
+  Type: integer, Width: 31:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: i
+  Drives: i
+
+Signal: input_matrix
+  Type: input, Width: DATA_WIDTH-1:0
+  Fan-In: 0, Fan-Out: 0
+
+Signal: max_value
+  Type: reg, Width: DATA_WIDTH-1:0
+  Fan-In: 0, Fan-Out: 0
+
+Signal: output_matrix
+  Type: output, Width: DATA_WIDTH-1:0
+  Fan-In: 0, Fan-Out: 0
+
+Signal: rst
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: start
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+================================================================================
+END OF REPORT
+================================================================================

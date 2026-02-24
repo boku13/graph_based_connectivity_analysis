@@ -1,0 +1,103 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: ALU
+Generated: 2026-02-25 03:03:17
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 5
+Total Dependencies: 4
+Average Fan-In: 0.8
+Average Fan-Out: 0.8
+
+Signal Type Distribution:
+  input       :    3
+  output      :    2
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: resultR
+   Type: output
+   Width: 15:0
+   Fan-In Count: 3
+   Driven By:
+     - opcode
+     - operandA
+     - operandB
+
+2. Signal: PSR
+   Type: output
+   Width: 3:0
+   Fan-In Count: 1
+   Driven By:
+     - resultR
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: operandA
+   Type: input
+   Width: 15:0
+   Fan-Out Count: 1
+   Drives:
+     - resultR
+
+2. Signal: operandB
+   Type: input
+   Width: 15:0
+   Fan-Out Count: 1
+   Drives:
+     - resultR
+
+3. Signal: opcode
+   Type: input
+   Width: 2:0
+   Fan-Out Count: 1
+   Drives:
+     - resultR
+
+4. Signal: resultR
+   Type: output
+   Width: 15:0
+   Fan-Out Count: 1
+   Drives:
+     - PSR
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: PSR
+  Type: output, Width: 3:0
+  Fan-In: 1, Fan-Out: 0
+  Driven by: resultR
+
+Signal: opcode
+  Type: input, Width: 2:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: resultR
+
+Signal: operandA
+  Type: input, Width: 15:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: resultR
+
+Signal: operandB
+  Type: input, Width: 15:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: resultR
+
+Signal: resultR
+  Type: output, Width: 15:0
+  Fan-In: 3, Fan-Out: 1
+  Driven by: opcode, operandA, operandB
+  Drives: PSR
+
+================================================================================
+END OF REPORT
+================================================================================

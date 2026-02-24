@@ -1,0 +1,69 @@
+[2025-03-01 13:13:29 UTC] vlib work && vlog '-timescale' '1ns/1ns' '-sv2k9' design.sv testbench.sv  && vsim -c -do "vsim +access+r; run -all; exit"  
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = /home/runner/work/work.lib
+MESSAGE "Unit top modules: matrix_transpose_tb."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2023.04.112.8911 built for Linux64 on May 12, 2023.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2023 Aldec, Inc. All rights reserved.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 3 (100.00%) other processes in SLP
+# SLP: 14 (82.35%) signals in SLP and 3 (17.65%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5508 kB (elbread=427 elab2=4945 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: 
+# KERNEL: Original matrix:
+# KERNEL:   0   1   2   3   4   5   6   7   8   9 
+# KERNEL:  10  11  12  13  14  15  16  17  18  19 
+# KERNEL:  20  21  22  23  24  25  26  27  28  29 
+# KERNEL:  30  31  32  33  34  35  36  37  38  39 
+# KERNEL:  40  41  42  43  44  45  46  47  48  49 
+# KERNEL:  50  51  52  53  54  55  56  57  58  59 
+# KERNEL:  60  61  62  63  64  65  66  67  68  69 
+# KERNEL:  70  71  72  73  74  75  76  77  78  79 
+# KERNEL:  80  81  82  83  84  85  86  87  88  89 
+# KERNEL:  90  91  92  93  94  95  96  97  98  99 
+# KERNEL: 
+# KERNEL: Transpose of the matrix:
+# KERNEL:   0  10  20  30  40  50  60  70  80  90 
+# KERNEL:   1  11  21  31  41  51  61  71  81  91 
+# KERNEL:   2  12  22  32  42  52  62  72  82  92 
+# KERNEL:   3  13  23  33  43  53  63  73  83  93 
+# KERNEL:   4  14  24  34  44  54  64  74  84  94 
+# KERNEL:   5  15  25  35  45  55  65  75  85  95 
+# KERNEL:   6  16  26  36  46  56  66  76  86  96 
+# KERNEL:   7  17  27  37  47  57  67  77  87  97 
+# KERNEL:   8  18  28  38  48  58  68  78  88  98 
+# KERNEL:   9  19  29  39  49  59  69  79  89  99 
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (60): $finish called.
+# KERNEL: Time: 50 ns,  Iteration: 0,  Instance: /matrix_transpose_tb,  Process: @INITIAL#20_1@.
+# KERNEL: stopped at time: 50 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Finding VCD file...
+./matrix_transpose_tb.vcd
+[2025-03-01 13:13:32 UTC] Opening EPWave...
+Done

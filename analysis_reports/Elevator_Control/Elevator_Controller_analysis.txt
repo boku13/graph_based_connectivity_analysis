@@ -1,0 +1,189 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: Elevator_Controller
+Generated: 2026-02-25 03:03:18
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 12
+Total Dependencies: 11
+Average Fan-In: 0.92
+Average Fan-Out: 0.92
+
+Signal Type Distribution:
+  input       :    5
+  integer     :    2
+  output      :    3
+  reg         :    2
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: i
+   Type: integer
+   Width: 31:0
+   Fan-In Count: 4
+   Driven By:
+     - curr_floor
+     - i
+     - j
+     - request
+
+2. Signal: request
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 2
+   Driven By:
+     - req_floor
+     - request
+
+3. Signal: j
+   Type: integer
+   Width: 31:0
+   Fan-In Count: 2
+   Driven By:
+     - j
+     - request
+
+4. Signal: curr_floor
+   Type: output
+   Width: 7:0
+   Fan-In Count: 1
+   Driven By:
+     - curr_floor
+
+5. Signal: direction
+   Type: output
+   Width: 1:0
+   Fan-In Count: 1
+   Driven By:
+     - curr_floor
+
+6. Signal: request_count
+   Type: reg
+   Width: 3:0
+   Fan-In Count: 1
+   Driven By:
+     - request_count
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: curr_floor
+   Type: output
+   Width: 7:0
+   Fan-Out Count: 3
+   Drives:
+     - curr_floor
+     - direction
+     - i
+
+2. Signal: request
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 3
+   Drives:
+     - i
+     - j
+     - request
+
+3. Signal: j
+   Type: integer
+   Width: 31:0
+   Fan-Out Count: 2
+   Drives:
+     - i
+     - j
+
+4. Signal: req_floor
+   Type: input
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - request
+
+5. Signal: request_count
+   Type: reg
+   Width: 3:0
+   Fan-Out Count: 1
+   Drives:
+     - request_count
+
+6. Signal: i
+   Type: integer
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - i
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: curr_floor
+  Type: output, Width: 7:0
+  Fan-In: 1, Fan-Out: 3
+  Driven by: curr_floor
+  Drives: curr_floor, direction, i
+
+Signal: direction
+  Type: output, Width: 1:0
+  Fan-In: 1, Fan-Out: 0
+  Driven by: curr_floor
+
+Signal: i
+  Type: integer, Width: 31:0
+  Fan-In: 4, Fan-Out: 1
+  Driven by: curr_floor, i, j, request
+  Drives: i
+
+Signal: j
+  Type: integer, Width: 31:0
+  Fan-In: 2, Fan-Out: 2
+  Driven by: j, request
+  Drives: i, j
+
+Signal: moving
+  Type: output, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: open_door
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: req_floor
+  Type: input, Width: 7:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: request
+
+Signal: req_valid
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: request
+  Type: reg, Width: 7:0
+  Fan-In: 2, Fan-Out: 3
+  Driven by: req_floor, request
+  Drives: i, j, request
+
+Signal: request_count
+  Type: reg, Width: 3:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: request_count
+  Drives: request_count
+
+Signal: reset
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+================================================================================
+END OF REPORT
+================================================================================

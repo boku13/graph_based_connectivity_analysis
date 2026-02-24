@@ -1,0 +1,110 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: sequence_detector
+Generated: 2026-02-25 03:03:17
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 6
+Total Dependencies: 5
+Average Fan-In: 0.83
+Average Fan-Out: 0.83
+
+Signal Type Distribution:
+  input       :    3
+  output      :    1
+  state_t     :    2
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: mealy_output
+   Type: output
+   Width: 1
+   Fan-In Count: 2
+   Driven By:
+     - present_state
+     - serial_input
+
+2. Signal: next_state
+   Type: state_t
+   Width: custom
+   Fan-In Count: 2
+   Driven By:
+     - present_state
+     - serial_input
+
+3. Signal: present_state
+   Type: state_t
+   Width: custom
+   Fan-In Count: 1
+   Driven By:
+     - next_state
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: serial_input
+   Type: input
+   Width: 1
+   Fan-Out Count: 2
+   Drives:
+     - mealy_output
+     - next_state
+
+2. Signal: present_state
+   Type: state_t
+   Width: custom
+   Fan-Out Count: 2
+   Drives:
+     - mealy_output
+     - next_state
+
+3. Signal: next_state
+   Type: state_t
+   Width: custom
+   Fan-Out Count: 1
+   Drives:
+     - present_state
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: mealy_output
+  Type: output, Width: 1
+  Fan-In: 2, Fan-Out: 0
+  Driven by: present_state, serial_input
+
+Signal: next_state
+  Type: state_t, Width: custom
+  Fan-In: 2, Fan-Out: 1
+  Driven by: present_state, serial_input
+  Drives: present_state
+
+Signal: present_state
+  Type: state_t, Width: custom
+  Fan-In: 1, Fan-Out: 2
+  Driven by: next_state
+  Drives: mealy_output, next_state
+
+Signal: rst
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: serial_input
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 2
+  Drives: mealy_output, next_state
+
+================================================================================
+END OF REPORT
+================================================================================

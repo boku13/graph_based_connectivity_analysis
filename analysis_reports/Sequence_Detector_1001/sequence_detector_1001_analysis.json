@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "module_name": "sequence_detector_1001",
+    "generated": "2026-02-25T03:03:17.966064",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "sequence_detector_1001",
+    "total_signals": 6,
+    "total_dependencies": 4,
+    "signal_types": {
+      "input": 3,
+      "output": 1,
+      "state_t": 2
+    },
+    "average_fan_in": 0.67,
+    "average_fan_out": 0.67
+  },
+  "top_fan_in": [
+    {
+      "signal": "next_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_in_count": 2,
+      "drivers": [
+        "current_state",
+        "seq_in"
+      ]
+    },
+    {
+      "signal": "seq_detect",
+      "type": "output",
+      "width": "1",
+      "fan_in_count": 1,
+      "drivers": [
+        "current_state"
+      ]
+    },
+    {
+      "signal": "current_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_in_count": 1,
+      "drivers": [
+        "next_state"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "current_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_out_count": 2,
+      "loads": [
+        "next_state",
+        "seq_detect"
+      ]
+    },
+    {
+      "signal": "seq_in",
+      "type": "input",
+      "width": "1",
+      "fan_out_count": 1,
+      "loads": [
+        "next_state"
+      ]
+    },
+    {
+      "signal": "next_state",
+      "type": "state_t",
+      "width": "custom",
+      "fan_out_count": 1,
+      "loads": [
+        "current_state"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "reset": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "seq_in": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "next_state"
+      ],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "seq_detect": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "current_state"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "current_state": {
+      "fan_in_count": 1,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "next_state"
+      ],
+      "fan_out_signals": [
+        "next_state",
+        "seq_detect"
+      ],
+      "signal_type": "state_t",
+      "width": "custom"
+    },
+    "next_state": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "current_state",
+        "seq_in"
+      ],
+      "fan_out_signals": [
+        "current_state"
+      ],
+      "signal_type": "state_t",
+      "width": "custom"
+    }
+  }
+}

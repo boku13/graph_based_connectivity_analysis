@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "module_name": "Memory",
+    "generated": "2026-02-25T03:03:18.014314",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "Memory",
+    "total_signals": 12,
+    "total_dependencies": 16,
+    "signal_types": {
+      "input": 3,
+      "inout": 1,
+      "output": 1,
+      "reg": 7
+    },
+    "average_fan_in": 1.33,
+    "average_fan_out": 1.33
+  },
+  "top_fan_in": [
+    {
+      "signal": "clkCnt",
+      "type": "reg",
+      "width": "6:0",
+      "fan_in_count": 5,
+      "drivers": [
+        "clkCnt",
+        "curAddr",
+        "curFunc",
+        "data_reg",
+        "memory"
+      ]
+    },
+    {
+      "signal": "data",
+      "type": "inout",
+      "width": "31:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "data_en",
+        "data_reg"
+      ]
+    },
+    {
+      "signal": "memory",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "curData",
+        "curFunc"
+      ]
+    },
+    {
+      "signal": "data_reg",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "curFunc",
+        "memory"
+      ]
+    },
+    {
+      "signal": "doneSig",
+      "type": "output",
+      "width": "1:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "curFunc"
+      ]
+    },
+    {
+      "signal": "curAddr",
+      "type": "reg",
+      "width": "8:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "addr"
+      ]
+    },
+    {
+      "signal": "curData",
+      "type": "reg",
+      "width": "31:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "data"
+      ]
+    },
+    {
+      "signal": "curFunc",
+      "type": "reg",
+      "width": "1:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "func"
+      ]
+    },
+    {
+      "signal": "data_en",
+      "type": "reg",
+      "width": "1",
+      "fan_in_count": 1,
+      "drivers": [
+        "curFunc"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "curFunc",
+      "type": "reg",
+      "width": "1:0",
+      "fan_out_count": 5,
+      "loads": [
+        "clkCnt",
+        "data_en",
+        "data_reg",
+        "doneSig",
+        "memory"
+      ]
+    },
+    {
+      "signal": "memory",
+      "type": "reg",
+      "width": "31:0",
+      "fan_out_count": 2,
+      "loads": [
+        "clkCnt",
+        "data_reg"
+      ]
+    },
+    {
+      "signal": "data_reg",
+      "type": "reg",
+      "width": "31:0",
+      "fan_out_count": 2,
+      "loads": [
+        "clkCnt",
+        "data"
+      ]
+    },
+    {
+      "signal": "func",
+      "type": "input",
+      "width": "1:0",
+      "fan_out_count": 1,
+      "loads": [
+        "curFunc"
+      ]
+    },
+    {
+      "signal": "addr",
+      "type": "input",
+      "width": "8:0",
+      "fan_out_count": 1,
+      "loads": [
+        "curAddr"
+      ]
+    },
+    {
+      "signal": "data",
+      "type": "inout",
+      "width": "31:0",
+      "fan_out_count": 1,
+      "loads": [
+        "curData"
+      ]
+    },
+    {
+      "signal": "curAddr",
+      "type": "reg",
+      "width": "8:0",
+      "fan_out_count": 1,
+      "loads": [
+        "clkCnt"
+      ]
+    },
+    {
+      "signal": "curData",
+      "type": "reg",
+      "width": "31:0",
+      "fan_out_count": 1,
+      "loads": [
+        "memory"
+      ]
+    },
+    {
+      "signal": "clkCnt",
+      "type": "reg",
+      "width": "6:0",
+      "fan_out_count": 1,
+      "loads": [
+        "clkCnt"
+      ]
+    },
+    {
+      "signal": "data_en",
+      "type": "reg",
+      "width": "1",
+      "fan_out_count": 1,
+      "loads": [
+        "data"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "func": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "curFunc"
+      ],
+      "signal_type": "input",
+      "width": "1:0"
+    },
+    "addr": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "curAddr"
+      ],
+      "signal_type": "input",
+      "width": "8:0"
+    },
+    "data": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "data_en",
+        "data_reg"
+      ],
+      "fan_out_signals": [
+        "curData"
+      ],
+      "signal_type": "inout",
+      "width": "31:0"
+    },
+    "doneSig": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "curFunc"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1:0"
+    },
+    "memory": {
+      "fan_in_count": 2,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "curData",
+        "curFunc"
+      ],
+      "fan_out_signals": [
+        "clkCnt",
+        "data_reg"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "curAddr": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "addr"
+      ],
+      "fan_out_signals": [
+        "clkCnt"
+      ],
+      "signal_type": "reg",
+      "width": "8:0"
+    },
+    "curData": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "data"
+      ],
+      "fan_out_signals": [
+        "memory"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "curFunc": {
+      "fan_in_count": 1,
+      "fan_out_count": 5,
+      "fan_in_signals": [
+        "func"
+      ],
+      "fan_out_signals": [
+        "clkCnt",
+        "data_en",
+        "data_reg",
+        "doneSig",
+        "memory"
+      ],
+      "signal_type": "reg",
+      "width": "1:0"
+    },
+    "clkCnt": {
+      "fan_in_count": 5,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "clkCnt",
+        "curAddr",
+        "curFunc",
+        "data_reg",
+        "memory"
+      ],
+      "fan_out_signals": [
+        "clkCnt"
+      ],
+      "signal_type": "reg",
+      "width": "6:0"
+    },
+    "data_reg": {
+      "fan_in_count": 2,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "curFunc",
+        "memory"
+      ],
+      "fan_out_signals": [
+        "clkCnt",
+        "data"
+      ],
+      "signal_type": "reg",
+      "width": "31:0"
+    },
+    "data_en": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "curFunc"
+      ],
+      "fan_out_signals": [
+        "data"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    }
+  }
+}

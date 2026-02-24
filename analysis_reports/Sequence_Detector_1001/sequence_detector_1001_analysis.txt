@@ -1,0 +1,108 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: sequence_detector_1001
+Generated: 2026-02-25 03:03:17
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 6
+Total Dependencies: 4
+Average Fan-In: 0.67
+Average Fan-Out: 0.67
+
+Signal Type Distribution:
+  input       :    3
+  output      :    1
+  state_t     :    2
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: next_state
+   Type: state_t
+   Width: custom
+   Fan-In Count: 2
+   Driven By:
+     - current_state
+     - seq_in
+
+2. Signal: seq_detect
+   Type: output
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - current_state
+
+3. Signal: current_state
+   Type: state_t
+   Width: custom
+   Fan-In Count: 1
+   Driven By:
+     - next_state
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: current_state
+   Type: state_t
+   Width: custom
+   Fan-Out Count: 2
+   Drives:
+     - next_state
+     - seq_detect
+
+2. Signal: seq_in
+   Type: input
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - next_state
+
+3. Signal: next_state
+   Type: state_t
+   Width: custom
+   Fan-Out Count: 1
+   Drives:
+     - current_state
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: current_state
+  Type: state_t, Width: custom
+  Fan-In: 1, Fan-Out: 2
+  Driven by: next_state
+  Drives: next_state, seq_detect
+
+Signal: next_state
+  Type: state_t, Width: custom
+  Fan-In: 2, Fan-Out: 1
+  Driven by: current_state, seq_in
+  Drives: current_state
+
+Signal: reset
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: seq_detect
+  Type: output, Width: 1
+  Fan-In: 1, Fan-Out: 0
+  Driven by: current_state
+
+Signal: seq_in
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 1
+  Drives: next_state
+
+================================================================================
+END OF REPORT
+================================================================================

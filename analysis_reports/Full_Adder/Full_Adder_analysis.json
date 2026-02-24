@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "module_name": "Full_Adder",
+    "generated": "2026-02-25T03:03:17.948060",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "Full_Adder",
+    "total_signals": 5,
+    "total_dependencies": 6,
+    "signal_types": {
+      "input": 3,
+      "output": 2
+    },
+    "average_fan_in": 1.2,
+    "average_fan_out": 1.2
+  },
+  "top_fan_in": [
+    {
+      "signal": "Sum",
+      "type": "output",
+      "width": "1",
+      "fan_in_count": 3,
+      "drivers": [
+        "A",
+        "B",
+        "C_In"
+      ]
+    },
+    {
+      "signal": "C_Out",
+      "type": "output",
+      "width": "1",
+      "fan_in_count": 3,
+      "drivers": [
+        "A",
+        "B",
+        "C_In"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "A",
+      "type": "input",
+      "width": "1",
+      "fan_out_count": 2,
+      "loads": [
+        "C_Out",
+        "Sum"
+      ]
+    },
+    {
+      "signal": "B",
+      "type": "input",
+      "width": "1",
+      "fan_out_count": 2,
+      "loads": [
+        "C_Out",
+        "Sum"
+      ]
+    },
+    {
+      "signal": "C_In",
+      "type": "input",
+      "width": "1",
+      "fan_out_count": 2,
+      "loads": [
+        "C_Out",
+        "Sum"
+      ]
+    }
+  ],
+  "all_signals": {
+    "A": {
+      "fan_in_count": 0,
+      "fan_out_count": 2,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "C_Out",
+        "Sum"
+      ],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "B": {
+      "fan_in_count": 0,
+      "fan_out_count": 2,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "C_Out",
+        "Sum"
+      ],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "C_In": {
+      "fan_in_count": 0,
+      "fan_out_count": 2,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "C_Out",
+        "Sum"
+      ],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "Sum": {
+      "fan_in_count": 3,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "A",
+        "B",
+        "C_In"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "C_Out": {
+      "fan_in_count": 3,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "A",
+        "B",
+        "C_In"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    }
+  }
+}

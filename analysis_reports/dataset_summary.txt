@@ -1,0 +1,106 @@
+================================================================================
+DATASET SUMMARY REPORT
+================================================================================
+Dataset: RTL Designs
+Total Designs: 15
+Top-K: 10
+
+Design Statistics:
+--------------------------------------------------------------------------------
+Module                         Signals    Deps       Avg FI     Avg FO    
+--------------------------------------------------------------------------------
+Full_Adder                     5          6          1.20       1.20      
+ALU                            5          4          0.80       0.80      
+sequence_detector              6          5          0.83       0.83      
+sequence_detector_1001         6          4          0.67       0.67      
+matrix_addition                10         6          0.60       0.60      
+matrix_transpose               8          4          0.50       0.50      
+matrix_multiplication          10         6          0.60       0.60      
+max_pooling                    8          1          0.12       0.12      
+quicksort                      12         18         1.50       1.50      
+FIFO                           9          4          0.44       0.44      
+Memory                         12         16         1.33       1.33      
+Elevator_Controller            12         11         0.92       0.92      
+uart                           13         8          0.62       0.62      
+i2c_controller                 18         26         1.44       1.44      
+pipeline                       26         24         0.92       0.92      
+
+================================================================================
+NOTABLE SIGNALS ACROSS ALL DESIGNS
+================================================================================
+
+
+Module: Full_Adder
+----------------------------------------
+  Highest Fan-In: Sum (count: 3)
+  Highest Fan-Out: A (count: 2)
+
+Module: ALU
+----------------------------------------
+  Highest Fan-In: resultR (count: 3)
+  Highest Fan-Out: operandA (count: 1)
+
+Module: sequence_detector
+----------------------------------------
+  Highest Fan-In: mealy_output (count: 2)
+  Highest Fan-Out: serial_input (count: 2)
+
+Module: sequence_detector_1001
+----------------------------------------
+  Highest Fan-In: next_state (count: 2)
+  Highest Fan-Out: current_state (count: 2)
+
+Module: matrix_addition
+----------------------------------------
+  Highest Fan-In: i (count: 2)
+  Highest Fan-Out: state (count: 4)
+
+Module: matrix_transpose
+----------------------------------------
+  Highest Fan-In: i (count: 2)
+  Highest Fan-Out: state (count: 3)
+
+Module: matrix_multiplication
+----------------------------------------
+  Highest Fan-In: i (count: 2)
+  Highest Fan-Out: state (count: 4)
+
+Module: max_pooling
+----------------------------------------
+  Highest Fan-In: i (count: 1)
+  Highest Fan-Out: i (count: 1)
+
+Module: quicksort
+----------------------------------------
+  Highest Fan-In: data (count: 5)
+  Highest Fan-Out: state (count: 8)
+
+Module: FIFO
+----------------------------------------
+  Highest Fan-In: data_out (count: 1)
+  Highest Fan-Out: data_in (count: 1)
+
+Module: Memory
+----------------------------------------
+  Highest Fan-In: clkCnt (count: 5)
+  Highest Fan-Out: curFunc (count: 5)
+
+Module: Elevator_Controller
+----------------------------------------
+  Highest Fan-In: i (count: 4)
+  Highest Fan-Out: curr_floor (count: 3)
+
+Module: uart
+----------------------------------------
+  Highest Fan-In: i (count: 4)
+  Highest Fan-Out: rx (count: 2)
+
+Module: i2c_controller
+----------------------------------------
+  Highest Fan-In: i2c_sda (count: 6)
+  Highest Fan-Out: state (count: 8)
+
+Module: pipeline
+----------------------------------------
+  Highest Fan-In: WB_Wrt_data (count: 3)
+  Highest Fan-Out: ID_Instr (count: 5)

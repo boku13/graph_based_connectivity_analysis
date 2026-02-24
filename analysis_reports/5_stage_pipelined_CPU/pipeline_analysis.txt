@@ -1,0 +1,326 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: pipeline
+Generated: 2026-02-25 03:03:18
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 26
+Total Dependencies: 24
+Average Fan-In: 0.92
+Average Fan-Out: 0.92
+
+Signal Type Distribution:
+  input       :    2
+  integer     :    1
+  reg         :   23
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: WB_Wrt_data
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 3
+   Driven By:
+     - MEM_ALUresult
+     - MEM_rd_mem
+     - dmem
+
+2. Signal: EX_Read_data1
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 2
+   Driven By:
+     - ID_Instr
+     - RF
+
+3. Signal: EX_is_I_type
+   Type: reg
+   Width: 1
+   Fan-In Count: 2
+   Driven By:
+     - IsBranch
+     - opcode
+
+4. Signal: MEM_ALUresult
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 2
+   Driven By:
+     - EX_Imm
+     - EX_Read_data1
+
+5. Signal: opcode
+   Type: reg
+   Width: 5:0
+   Fan-In Count: 2
+   Driven By:
+     - ID_Instr
+     - IsBranch
+
+6. Signal: RF
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 1
+   Driven By:
+     - WB_Wrt_data
+
+7. Signal: IF_PC
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 1
+   Driven By:
+     - IF_PC
+
+8. Signal: ID_Instr
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 1
+   Driven By:
+     - imem
+
+9. Signal: ID_nop
+   Type: reg
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - IF_nop
+
+10. Signal: EX_Imm
+   Type: reg
+   Width: 15:0
+   Fan-In Count: 1
+   Driven By:
+     - ID_Instr
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: ID_Instr
+   Type: reg
+   Width: 31:0
+   Fan-Out Count: 5
+   Drives:
+     - EX_Imm
+     - EX_Read_data1
+     - EX_Rs
+     - funct
+     - opcode
+
+2. Signal: opcode
+   Type: reg
+   Width: 5:0
+   Fan-Out Count: 2
+   Drives:
+     - EX_is_I_type
+     - IsBranch
+
+3. Signal: IsBranch
+   Type: reg
+   Width: 1
+   Fan-Out Count: 2
+   Drives:
+     - EX_is_I_type
+     - opcode
+
+4. Signal: imem
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - ID_Instr
+
+5. Signal: dmem
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - WB_Wrt_data
+
+6. Signal: RF
+   Type: reg
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - EX_Read_data1
+
+7. Signal: IF_PC
+   Type: reg
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - IF_PC
+
+8. Signal: IF_nop
+   Type: reg
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - ID_nop
+
+9. Signal: ID_nop
+   Type: reg
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - EX_nop
+
+10. Signal: EX_Read_data1
+   Type: reg
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - MEM_ALUresult
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: EX_Imm
+  Type: reg, Width: 15:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: ID_Instr
+  Drives: MEM_ALUresult
+
+Signal: EX_Read_data1
+  Type: reg, Width: 31:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: ID_Instr, RF
+  Drives: MEM_ALUresult
+
+Signal: EX_Rs
+  Type: reg, Width: 4:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: ID_Instr
+  Drives: MEM_Rs
+
+Signal: EX_is_I_type
+  Type: reg, Width: 1
+  Fan-In: 2, Fan-Out: 0
+  Driven by: IsBranch, opcode
+
+Signal: EX_nop
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 1
+  Driven by: ID_nop
+  Drives: MEM_nop
+
+Signal: ID_Instr
+  Type: reg, Width: 31:0
+  Fan-In: 1, Fan-Out: 5
+  Driven by: imem
+  Drives: EX_Imm, EX_Read_data1, EX_Rs, funct, opcode
+
+Signal: ID_nop
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 1
+  Driven by: IF_nop
+  Drives: EX_nop
+
+Signal: IF_PC
+  Type: reg, Width: 31:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: IF_PC
+  Drives: IF_PC
+
+Signal: IF_nop
+  Type: reg, Width: 1
+  Fan-In: 0, Fan-Out: 1
+  Drives: ID_nop
+
+Signal: IsBranch
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 2
+  Driven by: opcode
+  Drives: EX_is_I_type, opcode
+
+Signal: MEM_ALUresult
+  Type: reg, Width: 31:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: EX_Imm, EX_Read_data1
+  Drives: WB_Wrt_data
+
+Signal: MEM_Rs
+  Type: reg, Width: 4:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: EX_Rs
+  Drives: WB_Rs
+
+Signal: MEM_nop
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 1
+  Driven by: EX_nop
+  Drives: WB_nop
+
+Signal: MEM_rd_mem
+  Type: reg, Width: 1
+  Fan-In: 0, Fan-Out: 1
+  Drives: WB_Wrt_data
+
+Signal: RF
+  Type: reg, Width: 31:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: WB_Wrt_data
+  Drives: EX_Read_data1
+
+Signal: WB_Rs
+  Type: reg, Width: 4:0
+  Fan-In: 1, Fan-Out: 0
+  Driven by: MEM_Rs
+
+Signal: WB_Wrt_data
+  Type: reg, Width: 31:0
+  Fan-In: 3, Fan-Out: 1
+  Driven by: MEM_ALUresult, MEM_rd_mem, dmem
+  Drives: RF
+
+Signal: WB_nop
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 0
+  Driven by: MEM_nop
+
+Signal: WB_wrt_enable
+  Type: reg, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: dmem
+  Type: reg, Width: 7:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: WB_Wrt_data
+
+Signal: funct
+  Type: reg, Width: 5:0
+  Fan-In: 1, Fan-Out: 0
+  Driven by: ID_Instr
+
+Signal: i
+  Type: integer, Width: 31:0
+  Fan-In: 0, Fan-Out: 0
+
+Signal: imem
+  Type: reg, Width: 7:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: ID_Instr
+
+Signal: opcode
+  Type: reg, Width: 5:0
+  Fan-In: 2, Fan-Out: 2
+  Driven by: ID_Instr, IsBranch
+  Drives: EX_is_I_type, IsBranch
+
+Signal: reset
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+================================================================================
+END OF REPORT
+================================================================================

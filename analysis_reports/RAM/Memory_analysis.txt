@@ -1,0 +1,248 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: Memory
+Generated: 2026-02-25 03:03:18
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 12
+Total Dependencies: 16
+Average Fan-In: 1.33
+Average Fan-Out: 1.33
+
+Signal Type Distribution:
+  inout       :    1
+  input       :    3
+  output      :    1
+  reg         :    7
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: clkCnt
+   Type: reg
+   Width: 6:0
+   Fan-In Count: 5
+   Driven By:
+     - clkCnt
+     - curAddr
+     - curFunc
+     - data_reg
+     - memory
+
+2. Signal: data
+   Type: inout
+   Width: 31:0
+   Fan-In Count: 2
+   Driven By:
+     - data_en
+     - data_reg
+
+3. Signal: memory
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 2
+   Driven By:
+     - curData
+     - curFunc
+
+4. Signal: data_reg
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 2
+   Driven By:
+     - curFunc
+     - memory
+
+5. Signal: doneSig
+   Type: output
+   Width: 1:0
+   Fan-In Count: 1
+   Driven By:
+     - curFunc
+
+6. Signal: curAddr
+   Type: reg
+   Width: 8:0
+   Fan-In Count: 1
+   Driven By:
+     - addr
+
+7. Signal: curData
+   Type: reg
+   Width: 31:0
+   Fan-In Count: 1
+   Driven By:
+     - data
+
+8. Signal: curFunc
+   Type: reg
+   Width: 1:0
+   Fan-In Count: 1
+   Driven By:
+     - func
+
+9. Signal: data_en
+   Type: reg
+   Width: 1
+   Fan-In Count: 1
+   Driven By:
+     - curFunc
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: curFunc
+   Type: reg
+   Width: 1:0
+   Fan-Out Count: 5
+   Drives:
+     - clkCnt
+     - data_en
+     - data_reg
+     - doneSig
+     - memory
+
+2. Signal: memory
+   Type: reg
+   Width: 31:0
+   Fan-Out Count: 2
+   Drives:
+     - clkCnt
+     - data_reg
+
+3. Signal: data_reg
+   Type: reg
+   Width: 31:0
+   Fan-Out Count: 2
+   Drives:
+     - clkCnt
+     - data
+
+4. Signal: func
+   Type: input
+   Width: 1:0
+   Fan-Out Count: 1
+   Drives:
+     - curFunc
+
+5. Signal: addr
+   Type: input
+   Width: 8:0
+   Fan-Out Count: 1
+   Drives:
+     - curAddr
+
+6. Signal: data
+   Type: inout
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - curData
+
+7. Signal: curAddr
+   Type: reg
+   Width: 8:0
+   Fan-Out Count: 1
+   Drives:
+     - clkCnt
+
+8. Signal: curData
+   Type: reg
+   Width: 31:0
+   Fan-Out Count: 1
+   Drives:
+     - memory
+
+9. Signal: clkCnt
+   Type: reg
+   Width: 6:0
+   Fan-Out Count: 1
+   Drives:
+     - clkCnt
+
+10. Signal: data_en
+   Type: reg
+   Width: 1
+   Fan-Out Count: 1
+   Drives:
+     - data
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: addr
+  Type: input, Width: 8:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: curAddr
+
+Signal: clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: clkCnt
+  Type: reg, Width: 6:0
+  Fan-In: 5, Fan-Out: 1
+  Driven by: clkCnt, curAddr, curFunc, data_reg, memory
+  Drives: clkCnt
+
+Signal: curAddr
+  Type: reg, Width: 8:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: addr
+  Drives: clkCnt
+
+Signal: curData
+  Type: reg, Width: 31:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: data
+  Drives: memory
+
+Signal: curFunc
+  Type: reg, Width: 1:0
+  Fan-In: 1, Fan-Out: 5
+  Driven by: func
+  Drives: clkCnt, data_en, data_reg, doneSig, memory
+
+Signal: data
+  Type: inout, Width: 31:0
+  Fan-In: 2, Fan-Out: 1
+  Driven by: data_en, data_reg
+  Drives: curData
+
+Signal: data_en
+  Type: reg, Width: 1
+  Fan-In: 1, Fan-Out: 1
+  Driven by: curFunc
+  Drives: data
+
+Signal: data_reg
+  Type: reg, Width: 31:0
+  Fan-In: 2, Fan-Out: 2
+  Driven by: curFunc, memory
+  Drives: clkCnt, data
+
+Signal: doneSig
+  Type: output, Width: 1:0
+  Fan-In: 1, Fan-Out: 0
+  Driven by: curFunc
+
+Signal: func
+  Type: input, Width: 1:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: curFunc
+
+Signal: memory
+  Type: reg, Width: 31:0
+  Fan-In: 2, Fan-Out: 2
+  Driven by: curData, curFunc
+  Drives: clkCnt, data_reg
+
+================================================================================
+END OF REPORT
+================================================================================

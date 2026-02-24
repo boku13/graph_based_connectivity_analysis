@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "module_name": "matrix_addition",
+    "generated": "2026-02-25T03:03:17.972068",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "matrix_addition",
+    "total_signals": 10,
+    "total_dependencies": 6,
+    "signal_types": {
+      "input": 5,
+      "output": 2,
+      "reg": 3
+    },
+    "average_fan_in": 0.6,
+    "average_fan_out": 0.6
+  },
+  "top_fan_in": [
+    {
+      "signal": "i",
+      "type": "reg",
+      "width": "$clog2(ROWS)-1:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "i",
+        "state"
+      ]
+    },
+    {
+      "signal": "j",
+      "type": "reg",
+      "width": "$clog2(COLS)-1:0",
+      "fan_in_count": 2,
+      "drivers": [
+        "j",
+        "state"
+      ]
+    },
+    {
+      "signal": "done",
+      "type": "output",
+      "width": "1",
+      "fan_in_count": 1,
+      "drivers": [
+        "state"
+      ]
+    },
+    {
+      "signal": "state",
+      "type": "reg",
+      "width": "1:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "state"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "state",
+      "type": "reg",
+      "width": "1:0",
+      "fan_out_count": 4,
+      "loads": [
+        "done",
+        "i",
+        "j",
+        "state"
+      ]
+    },
+    {
+      "signal": "i",
+      "type": "reg",
+      "width": "$clog2(ROWS)-1:0",
+      "fan_out_count": 1,
+      "loads": [
+        "i"
+      ]
+    },
+    {
+      "signal": "j",
+      "type": "reg",
+      "width": "$clog2(COLS)-1:0",
+      "fan_out_count": 1,
+      "loads": [
+        "j"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "rst": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "start": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "a": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "7:0"
+    },
+    "b": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "7:0"
+    },
+    "sum": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "7:0"
+    },
+    "done": {
+      "fan_in_count": 1,
+      "fan_out_count": 0,
+      "fan_in_signals": [
+        "state"
+      ],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "state": {
+      "fan_in_count": 1,
+      "fan_out_count": 4,
+      "fan_in_signals": [
+        "state"
+      ],
+      "fan_out_signals": [
+        "done",
+        "i",
+        "j",
+        "state"
+      ],
+      "signal_type": "reg",
+      "width": "1:0"
+    },
+    "i": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "i",
+        "state"
+      ],
+      "fan_out_signals": [
+        "i"
+      ],
+      "signal_type": "reg",
+      "width": "$clog2(ROWS)-1:0"
+    },
+    "j": {
+      "fan_in_count": 2,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "j",
+        "state"
+      ],
+      "fan_out_signals": [
+        "j"
+      ],
+      "signal_type": "reg",
+      "width": "$clog2(COLS)-1:0"
+    }
+  }
+}

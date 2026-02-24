@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "module_name": "max_pooling",
+    "generated": "2026-02-25T03:03:17.992776",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "max_pooling",
+    "total_signals": 8,
+    "total_dependencies": 1,
+    "signal_types": {
+      "input": 4,
+      "output": 2,
+      "reg": 1,
+      "integer": 1
+    },
+    "average_fan_in": 0.12,
+    "average_fan_out": 0.12
+  },
+  "top_fan_in": [
+    {
+      "signal": "i",
+      "type": "integer",
+      "width": "31:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "i"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "i",
+      "type": "integer",
+      "width": "31:0",
+      "fan_out_count": 1,
+      "loads": [
+        "i"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "rst": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "start": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "input_matrix": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "DATA_WIDTH-1:0"
+    },
+    "output_matrix": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "DATA_WIDTH-1:0"
+    },
+    "done": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "max_value": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "reg",
+      "width": "DATA_WIDTH-1:0"
+    },
+    "i": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "i"
+      ],
+      "fan_out_signals": [
+        "i"
+      ],
+      "signal_type": "integer",
+      "width": "31:0"
+    }
+  }
+}

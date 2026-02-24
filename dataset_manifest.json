@@ -1,0 +1,137 @@
+{
+  "dataset_name": "RTL Designs",
+  "description": "Collection of 15 Verilog RTL designs ranging from simple combinational circuits to complex sequential controllers, selected for RTL connectivity analysis",
+  "total_designs": 15,
+  "designs": [
+    {
+      "id": 1,
+      "name": "Full_Adder",
+      "description": "Simple combinational full adder circuit",
+      "category": "combinational",
+      "rtl_file": "./RTL_Designs/5. Full_Adder/full_adder_verilog.v",
+      "complexity": "low"
+    },
+    {
+      "id": 2,
+      "name": "ALU",
+      "description": "16-bit Arithmetic Logic Unit with multiple operations",
+      "category": "combinational",
+      "rtl_file": "./RTL_Designs/2. ALU/ALU_verilog.v",
+      "complexity": "medium"
+    },
+    {
+      "id": 3,
+      "name": "Seq_Det_11010",
+      "description": "Sequence detector FSM for pattern 11010",
+      "category": "sequential_fsm",
+      "rtl_file": "./RTL_Designs/13. Seq_Det_11010/Seq_Det_11010.v",
+      "complexity": "low"
+    },
+    {
+      "id": 4,
+      "name": "Sequence_Detector_1001",
+      "description": "Sequence detector FSM for pattern 1001",
+      "category": "sequential_fsm",
+      "rtl_file": "./RTL_Designs/14. Sequence_Detector_1001/Sequence_Detector_1001.v",
+      "complexity": "low"
+    },
+    {
+      "id": 5,
+      "name": "Matrix_Addition",
+      "description": "4x4 matrix addition with sequential control",
+      "category": "datapath",
+      "rtl_file": "./RTL_Designs/7.  Matrix_Addition/Matrix_Addition.v",
+      "complexity": "medium"
+    },
+    {
+      "id": 6,
+      "name": "Matrix_Transpose",
+      "description": "Matrix transposition circuit",
+      "category": "datapath",
+      "rtl_file": "./RTL_Designs/9. Matrix_Transpose/Matrix_Transpose.v",
+      "complexity": "medium"
+    },
+    {
+      "id": 7,
+      "name": "Matrix_Mult",
+      "description": "Matrix multiplication datapath",
+      "category": "datapath",
+      "rtl_file": "./RTL_Designs/8. Matrix_Mult/Matrix_Mult.v",
+      "complexity": "medium"
+    },
+    {
+      "id": 8,
+      "name": "Max_Pooling",
+      "description": "Max pooling operation for neural networks",
+      "category": "datapath",
+      "rtl_file": "./RTL_Designs/10. Max_Pooling/Max_Pooling.v",
+      "complexity": "medium"
+    },
+    {
+      "id": 9,
+      "name": "Quick_Sort",
+      "description": "Quick sort algorithm implementation",
+      "category": "algorithm",
+      "rtl_file": "./RTL_Designs/11. Quick_Sort/Quick_Sort.v",
+      "complexity": "high"
+    },
+    {
+      "id": 10,
+      "name": "FIFO",
+      "description": "Dual-clock FIFO buffer",
+      "category": "sequential_controller",
+      "rtl_file": "./RTL_Designs/4. fifo/fifo.v",
+      "complexity": "medium"
+    },
+    {
+      "id": 11,
+      "name": "RAM",
+      "description": "RAM memory controller",
+      "category": "memory",
+      "rtl_file": "./RTL_Designs/12. RAM/RAM/RAM.v",
+      "complexity": "medium"
+    },
+    {
+      "id": 12,
+      "name": "Elevator_Control",
+      "description": "Elevator controller with request queue",
+      "category": "sequential_fsm",
+      "rtl_file": "./RTL_Designs/3. Elevator_Control/Elevator_Control.v",
+      "complexity": "high"
+    },
+    {
+      "id": 13,
+      "name": "UART_TX_RX",
+      "description": "UART transmitter and receiver",
+      "category": "communication_protocol",
+      "rtl_file": "./RTL_Designs/15. UART_TX_RX/UART_TX_RX/UART_TX_RX.v",
+      "complexity": "high"
+    },
+    {
+      "id": 14,
+      "name": "I2C_Controller",
+      "description": "I2C communication controller",
+      "category": "communication_protocol",
+      "rtl_file": "./RTL_Designs/6. I2C_Controller/I2C_Controller/I2C_Controller.v",
+      "complexity": "high"
+    },
+    {
+      "id": 15,
+      "name": "5_stage_pipelined_CPU",
+      "description": "5-stage pipelined CPU design",
+      "category": "hierarchical",
+      "rtl_file": "./RTL_Designs/1. 5_stage_pipelined_CPU/5_stage_pipelined_CPU_verilog.v",
+      "complexity": "high"
+    }
+  ],
+  "categories": {
+    "combinational": "Pure combinational logic circuits",
+    "sequential_fsm": "Finite State Machines with sequential logic",
+    "datapath": "Data processing paths with control logic",
+    "algorithm": "Algorithm implementations in hardware",
+    "sequential_controller": "Sequential controllers and buffers",
+    "memory": "Memory controllers and interfaces",
+    "communication_protocol": "Communication protocol implementations",
+    "hierarchical": "Complex hierarchical designs with submodules"
+  }
+}

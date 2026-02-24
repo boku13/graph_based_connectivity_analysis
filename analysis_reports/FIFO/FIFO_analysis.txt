@@ -1,0 +1,134 @@
+================================================================================
+RTL CONNECTIVITY ANALYSIS REPORT
+================================================================================
+Module: FIFO
+Generated: 2026-02-25 03:03:18
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Signals: 9
+Total Dependencies: 4
+Average Fan-In: 0.44
+Average Fan-Out: 0.44
+
+Signal Type Distribution:
+  input       :    5
+  output      :    1
+  reg         :    3
+
+================================================================================
+TOP-10 SIGNALS BY FAN-IN (Incoming-Busy)
+================================================================================
+
+1. Signal: data_out
+   Type: output
+   Width: 7:0
+   Fan-In Count: 1
+   Driven By:
+     - fifo_memory
+
+2. Signal: fifo_memory
+   Type: reg
+   Width: 7:0
+   Fan-In Count: 1
+   Driven By:
+     - data_in
+
+3. Signal: write_ptr
+   Type: reg
+   Width: 8:0
+   Fan-In Count: 1
+   Driven By:
+     - write_ptr
+
+4. Signal: read_ptr
+   Type: reg
+   Width: 8:0
+   Fan-In Count: 1
+   Driven By:
+     - read_ptr
+
+================================================================================
+TOP-10 SIGNALS BY FAN-OUT (Outgoing-Busy)
+================================================================================
+
+1. Signal: data_in
+   Type: input
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - fifo_memory
+
+2. Signal: fifo_memory
+   Type: reg
+   Width: 7:0
+   Fan-Out Count: 1
+   Drives:
+     - data_out
+
+3. Signal: write_ptr
+   Type: reg
+   Width: 8:0
+   Fan-Out Count: 1
+   Drives:
+     - write_ptr
+
+4. Signal: read_ptr
+   Type: reg
+   Width: 8:0
+   Fan-Out Count: 1
+   Drives:
+     - read_ptr
+
+================================================================================
+COMPLETE SIGNAL CONNECTIVITY TABLE
+================================================================================
+
+Signal: data_in
+  Type: input, Width: 7:0
+  Fan-In: 0, Fan-Out: 1
+  Drives: fifo_memory
+
+Signal: data_out
+  Type: output, Width: 7:0
+  Fan-In: 1, Fan-Out: 0
+  Driven by: fifo_memory
+
+Signal: fifo_memory
+  Type: reg, Width: 7:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: data_in
+  Drives: data_out
+
+Signal: read_clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: read_ptr
+  Type: reg, Width: 8:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: read_ptr
+  Drives: read_ptr
+
+Signal: rst
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: write_clk
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: write_en
+  Type: input, Width: 1
+  Fan-In: 0, Fan-Out: 0
+
+Signal: write_ptr
+  Type: reg, Width: 8:0
+  Fan-In: 1, Fan-Out: 1
+  Driven by: write_ptr
+  Drives: write_ptr
+
+================================================================================
+END OF REPORT
+================================================================================

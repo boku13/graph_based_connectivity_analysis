@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "module_name": "uart",
+    "generated": "2026-02-25T03:03:18.029317",
+    "top_k": 10
+  },
+  "statistics": {
+    "module_name": "uart",
+    "total_signals": 13,
+    "total_dependencies": 8,
+    "signal_types": {
+      "input": 5,
+      "output": 3,
+      "reg": 5
+    },
+    "average_fan_in": 0.62,
+    "average_fan_out": 0.62
+  },
+  "top_fan_in": [
+    {
+      "signal": "i",
+      "type": "reg",
+      "width": "3:0",
+      "fan_in_count": 4,
+      "drivers": [
+        "i",
+        "r_data",
+        "r_data_buff",
+        "rx"
+      ]
+    },
+    {
+      "signal": "rx",
+      "type": "input",
+      "width": "1",
+      "fan_in_count": 1,
+      "drivers": [
+        "recv_flag"
+      ]
+    },
+    {
+      "signal": "r_data",
+      "type": "output",
+      "width": "7:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "r_data_buff"
+      ]
+    },
+    {
+      "signal": "r_data_buff",
+      "type": "reg",
+      "width": "7:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "rx"
+      ]
+    },
+    {
+      "signal": "cnt",
+      "type": "reg",
+      "width": "13:0",
+      "fan_in_count": 1,
+      "drivers": [
+        "cnt"
+      ]
+    }
+  ],
+  "top_fan_out": [
+    {
+      "signal": "rx",
+      "type": "input",
+      "width": "1",
+      "fan_out_count": 2,
+      "loads": [
+        "i",
+        "r_data_buff"
+      ]
+    },
+    {
+      "signal": "r_data_buff",
+      "type": "reg",
+      "width": "7:0",
+      "fan_out_count": 2,
+      "loads": [
+        "i",
+        "r_data"
+      ]
+    },
+    {
+      "signal": "r_data",
+      "type": "output",
+      "width": "7:0",
+      "fan_out_count": 1,
+      "loads": [
+        "i"
+      ]
+    },
+    {
+      "signal": "recv_flag",
+      "type": "reg",
+      "width": "1",
+      "fan_out_count": 1,
+      "loads": [
+        "rx"
+      ]
+    },
+    {
+      "signal": "cnt",
+      "type": "reg",
+      "width": "13:0",
+      "fan_out_count": 1,
+      "loads": [
+        "cnt"
+      ]
+    },
+    {
+      "signal": "i",
+      "type": "reg",
+      "width": "3:0",
+      "fan_out_count": 1,
+      "loads": [
+        "i"
+      ]
+    }
+  ],
+  "all_signals": {
+    "clk": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "rst_n": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "rx": {
+      "fan_in_count": 1,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "recv_flag"
+      ],
+      "fan_out_signals": [
+        "i",
+        "r_data_buff"
+      ],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "t_ack": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "1"
+    },
+    "t_data": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "input",
+      "width": "7:0"
+    },
+    "tx": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "r_data": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "r_data_buff"
+      ],
+      "fan_out_signals": [
+        "i"
+      ],
+      "signal_type": "output",
+      "width": "7:0"
+    },
+    "r_ack": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "output",
+      "width": "1"
+    },
+    "r_data_buff": {
+      "fan_in_count": 1,
+      "fan_out_count": 2,
+      "fan_in_signals": [
+        "rx"
+      ],
+      "fan_out_signals": [
+        "i",
+        "r_data"
+      ],
+      "signal_type": "reg",
+      "width": "7:0"
+    },
+    "recv_flag": {
+      "fan_in_count": 0,
+      "fan_out_count": 1,
+      "fan_in_signals": [],
+      "fan_out_signals": [
+        "rx"
+      ],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "rx_flag": {
+      "fan_in_count": 0,
+      "fan_out_count": 0,
+      "fan_in_signals": [],
+      "fan_out_signals": [],
+      "signal_type": "reg",
+      "width": "1"
+    },
+    "cnt": {
+      "fan_in_count": 1,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "cnt"
+      ],
+      "fan_out_signals": [
+        "cnt"
+      ],
+      "signal_type": "reg",
+      "width": "13:0"
+    },
+    "i": {
+      "fan_in_count": 4,
+      "fan_out_count": 1,
+      "fan_in_signals": [
+        "i",
+        "r_data",
+        "r_data_buff",
+        "rx"
+      ],
+      "fan_out_signals": [
+        "i"
+      ],
+      "signal_type": "reg",
+      "width": "3:0"
+    }
+  }
+}

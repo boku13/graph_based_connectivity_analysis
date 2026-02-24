@@ -10,12 +10,6 @@ __pycache__/
 *$py.class
 *.so
 
-# Analysis reports (generated output)
-analysis_reports/
-reports/
-*.txt
-*.json
-
 # IDE
 .vscode/
 .idea/
